@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../head.ejs') %>
+<body>
+
+<%- include('index.ejs') %>
+
+<%- include('../nav.ejs') %>
+
+<h1 class="text-4xl font-bold">SEARCH STUDENT</h1>
+<div class="p-8">
+    <form action="/search" method="post">
+        <input type="text" name="studentID" id="studentID" placeholder="Enter Student ID..." class="p-2 mb-4">
+        <input type="submit" value="Search" class="p-2 mb-4">
+    </form>
+</div>
+
+<div class="w-full absolute bottom-0" style="z-index: -9999;">
+    <%- include('../footer.ejs') %>
+</div>
+</body>
+</html>

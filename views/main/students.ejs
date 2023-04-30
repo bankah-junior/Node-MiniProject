@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../head.ejs') %>
+<body>
+
+<%- include('index.ejs') %>
+
+<%- include('../nav.ejs') %>
+
+<h1 class="text-4xl font-bold pl-4">ALL STUDENTS</h1>
+<% if (students.length > 0) { %>
+    <% students.forEach(student => { %>
+        <h3 class="name text-2xl p-4">* <%= student.surname %> <%= student.othername %></h3>
+
+    <% }) %>
+<% } else { %>
+    <p>There are no students to display...</p>
+<% } %>
+
+    
+<%- include('../footer.ejs') %>
+</body>
+</html>
